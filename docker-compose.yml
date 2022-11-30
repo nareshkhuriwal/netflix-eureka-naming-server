@@ -6,11 +6,14 @@ services:
       - "8761:8761"
     networks:
       - opallios-microservice-net
-    mem_limit: 512m
-    mem_reservation: 128M
-    cpus: 0.5
-
-    
+    deploy:
+      resources:
+        limits:
+          cpus: '0.75'
+          memory: 512M
+        reservations:
+          cpus: '0.25'
+          memory: 64M
 
 networks:
   opallios-microservice-net:
