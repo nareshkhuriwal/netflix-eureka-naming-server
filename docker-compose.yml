@@ -1,0 +1,11 @@
+version: "3"
+services:
+  linkmygoodsapi_server:
+    image: linkmygoodsapi:latest
+    ports:
+      - "8443:8443"
+    networks:
+      - opallios-microservice-net
+
+networks:
+  opallios-microservice-net:
